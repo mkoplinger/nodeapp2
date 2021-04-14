@@ -30,6 +30,6 @@ spec:
     spec:
       containers:
         - name: leeroy-web
-          image: app
+          image: __IMAGE__
           ports:
             - containerPort: 8080
