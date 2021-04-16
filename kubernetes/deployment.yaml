@@ -9,7 +9,7 @@ spec:
   ports:
     - port: 8080
       targetPort: 8080
-      NodePort: 30002
+      nodePort: 30002
       name: leeroy-web
   selector:
     app: leeroy-web
