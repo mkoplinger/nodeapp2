@@ -8,6 +8,8 @@ spec:
   type: NodePort
   ports:
     - port: 8080
+      targetPort: 8080
+      NodePort: 30002
       name: leeroy-web
   selector:
     app: leeroy-web
@@ -31,5 +33,6 @@ spec:
       containers:
         - name: leeroy-web
           image: __IMAGE__
+          imagePullPolicy: Always
           ports:
             - containerPort: 8080
