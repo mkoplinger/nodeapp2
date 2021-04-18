@@ -1,36 +1,36 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: SERVICE_NAME
+  name: __SERVICE_NAME__
   labels:
-    app: SERVICE_NAME
+    app: __SERVICE_NAME__
 spec:
   type: NodePort
   ports:
     - port: 8080
       targetPort: 8080
-      name: SERVICE_NAME
+      name: __SERVICE_NAME__
   selector:
-    app: SERVICE_NAME
+    app: __SERVICE_NAME__
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: SERVICE_NAME
+  name: __SERVICE_NAME__
   labels:
-    app: SERVICE_NAME
+    app: __SERVICE_NAME__
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: SERVICE_NAME
+      app: __SERVICE_NAME__
   template:
     metadata:
       labels:
-        app: SERVICE_NAME
+        app: __SERVICE_NAME__
     spec:
       containers:
-        - name: SERVICE_NAME
+        - name: __SERVICE_NAME__
           image: __IMAGE__
           imagePullPolicy: Always
           ports:
