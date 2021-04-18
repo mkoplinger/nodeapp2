@@ -4,8 +4,9 @@
     "main": "app.js",
     "scripts": {
       "start": "node app.js",
+      "lint": "echo 'Give me something to Lint!'",
       "build": "echo 'Give me something to Build!'",
-      "test": "echo \"Error: no test specified\" && exit 1"
+      "test": "echo 'Give me something to Test!'"
     },
     "dependencies": {
       "express": "^4.16.1"
